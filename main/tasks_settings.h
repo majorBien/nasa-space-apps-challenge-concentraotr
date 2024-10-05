@@ -16,7 +16,7 @@
 #define LORA_RECEIVE_CORE_ID				0
 
 // Wifi task
-#define WIFI_STACK_SIZE					    2048	
+#define WIFI_STACK_SIZE					    4096	
 #define WIFI_PRIORITY						4
 #define WIFI_CORE_ID						1
 
