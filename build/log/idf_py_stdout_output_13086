@@ -1,0 +1,1894 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct  5 2024 19:30:52[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27114h (160020) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=0003713c vaddr=3ffb0000 size=03d20h ( 15648) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=0003ae64 vaddr=40080000 size=051b4h ( 20916) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=8ecech (584940) map[0m
+[0;32mI (375) esp_image: segment 4: paddr=000ced14 vaddr=400851b4 size=13214h ( 78356) load[0m
+[0;32mI (418) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (418) boot: Disabling RNG early entropy source...[0m
+[0;32mI (429) cpu_start: Multicore app[0m
+[0;32mI (438) cpu_start: Pro cpu start user code[0m
+[0;32mI (438) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (438) cpu_start: Application information:[0m
+[0;32mI (441) cpu_start: Project name:     app-template[0m
+[0;32mI (447) cpu_start: App version:      6038b13-dirty[0m
+[0;32mI (452) cpu_start: Compile time:     Oct  5 2024 19:37:26[0m
+[0;32mI (458) cpu_start: ELF file SHA256:  af71012da...[0m
+[0;32mI (464) cpu_start: ESP-IDF:          v5.2.1-dirty[0m
+[0;32mI (469) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (474) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (478) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (483) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (491) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (496) heap_init: At 3FFB7FA0 len 00028060 (160 KiB): DRAM[0m
+[0;32mI (503) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (509) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (515) heap_init: At 400983C8 len 00007C38 (31 KiB): IRAM[0m
+[0;32mI (523) spi_flash: detected chip: generic[0m
+[0;32mI (526) spi_flash: flash io: dio[0m
+[0;33mW (530) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (544) main_task: Started on CPU0[0m
+[0;32mI (554) main_task: Calling app_main()[0m
+[0;32mI (554) MAIN: APP START[0m
+[0;32mI (584) http_server: Frequency is 868MHz[0m
+[0;32mI (584) RA01S: CONFIG_MISO_GPIO=4[0m
+[0;32mI (584) RA01S: CONFIG_MOSI_GPIO=5[0m
+[0;32mI (584) RA01S: CONFIG_SCLK_GPIO=18[0m
+[0;32mI (594) RA01S: CONFIG_NSS_GPIO=19[0m
+[0;32mI (594) RA01S: CONFIG_RST_GPIO=2[0m
+[0;32mI (594) RA01S: CONFIG_BUSY_GPIO=15[0m
+[0;32mI (604) RA01S: CONFIG_TXEN_GPIO=22[0m
+[0;32mI (604) RA01S: CONFIG_RXEN_GPIO=23[0m
+[0;32mI (614) gpio: GPIO[19]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (624) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (634) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (634) gpio: GPIO[22]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (644) gpio: GPIO[23]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (654) RA01S: spi_bus_initialize=0[0m
+[0;32mI (664) RA01S: spi_bus_add_device=0[0m
+[0;33mW (664) http_server: Enable TCXO[0m
+[0;32mI (714) RA01S: Reset[0m
+[0;32mI (714) RA01S: syncWord=0x1424[0m
+[0;32mI (714) RA01S: SX126x installed[0m
+[0;33mW (714) RA01S: WriteCommand2 status=0a retry=1[0m
+[0;32mI (714) RA01S: tcxoVoltage=3.300000[0m
+[0;32mI (724) RA01S: useRegulatorLDO=1[0m
+[0;32mI (734) RA01S: SetStopRxTimerOnPreambleDetect enable=0[0m
+[0;32mI (764) RX: Start Receiver[0m
+[0;32mI (764) RX: Waiting for JSON...[0m
+[0;32mI (764) wifi_app: STARTING WIFI APPLICATION[0m
+[0;32mI (764) main_task: Returned from app_main()[0m
+[0;32mI (794) wifi_init: rx ba win: 6[0m
+[0;32mI (794) wifi_init: tcpip mbox: 32[0m
+[0;32mI (794) wifi_init: udp mbox: 6[0m
+[0;32mI (794) wifi_init: tcp mbox: 6[0m
+[0;32mI (794) wifi_init: tcp tx win: 5760[0m
+[0;32mI (794) wifi_init: tcp rx win: 5760[0m
+[0;32mI (804) wifi_init: tcp mss: 1440[0m
+[0;32mI (804) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (814) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1074) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (1164) wifi_app: WIFI_APP_MSG_START_HTTP_SERVER[0m
+[0;32mI (1164) wifi_app: WIFI_EVENT_STA_START[0m
+[0;32mI (1164) http_server: http_server_configure: Starting server on port: '80' with task priority: '3'[0m
+[0;32mI (1164) wifi_app: WIFI_EVENT_AP_START[0m
+[0;32mI (1174) http_server: http_server_configure: Registering URI handlers[0m
+[0;32mI (1184) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.0.3[0m
+[0;32mI (1804) RX: 159 byte packet received: [{
+	"dirt":	20.8251953125,
+	"rain":	11.4013671875,
+	"air":	34.423828125,
+	"sun":	99.9755859375,
+	"pressure":	99624.6640625,
+	"temperature":	23.889999389648438
+}][0m
+[0;32mI (1824) RX: rssi=-35[dBm], snr=12[dB][0m
+[0;32mI (3864) RX: 156 byte packet received: [{
+	"dirt":	13.525390625,
+	"rain":	10.64453125,
+	"air":	34.4482421875,
+	"sun":	99.9755859375,
+	"pressure":	99621.640625,
+	"temperature":	23.889999389648438
+}][0m
+[0;32mI (3874) RX: rssi=-34[dBm], snr=13[dB][0m
+[0;32mI (4894) RX: 143 byte packet received: [{
+	"dirt":	22.4609375,
+	"rain":	11.3037109375,
+	"air":	34.521484375,
+	"sun":	99.9755859375,
+	"pressure":	99598.9609375,
+	"temperature":	23.75
+}][0m
+[0;32mI (4914) RX: rssi=-35[dBm], snr=13[dB][0m
+[0;32mI (5944) RX: 155 byte packet received: [{
+	"dirt":	23.2421875,
+	"rain":	11.1572265625,
+	"air":	34.7900390625,
+	"sun":	99.9755859375,
+	"pressure":	99621.90625,
+	"temperature":	23.889999389648438
+}][0m
+[0;32mI (5954) RX: rssi=-35[dBm], snr=13[dB][0m
+[0;32mI (6984) RX: 154 byte packet received: [{
+	"dirt":	10.9130859375,
+	"rain":	10.986328125,
+	"air":	35.25390625,
+	"sun":	99.9755859375,
+	"pressure":	99627.3125,
+	"temperature":	23.899999618530273
+}][0m
+[0;32mI (6994) RX: rssi=-40[dBm], snr=12[dB][0m
+[0;32mI (8834) wifi_app: WIFI_EVENT_AP_STACONNECTED[0m
+[0;32mI (8994) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.0.4[0m
+[0;32mI (9034) RX: 155 byte packet received: [{
+	"dirt":	22.607421875,
+	"rain":	10.9619140625,
+	"air":	35.6201171875,
+	"sun":	99.9755859375,
+	"pressure":	99629.375,
+	"temperature":	23.899999618530273
+}][0m
+[0;32mI (9054) RX: rssi=-38[dBm], snr=12[dB][0m
+[0;32mI (10084) RX: 150 byte packet received: [{
+	"dirt":	19.53125,
+	"rain":	11.328125,
+	"air":	35.7666015625,
+	"sun":	99.9755859375,
+	"pressure":	99605.046875,
+	"temperature":	23.760000228881836
+}][0m
+[0;32mI (10104) RX: rssi=-38[dBm], snr=12[dB][0m
+[0;32mI (11134) RX: 155 byte packet received: [{
+	"dirt":	22.8515625,
+	"rain":	10.83984375,
+	"air":	35.8642578125,
+	"sun":	99.9755859375,
+	"pressure":	99626.6171875,
+	"temperature":	23.899999618530273
+}][0m
+[0;32mI (11144) RX: rssi=-38[dBm], snr=12[dB][0m
+[0;32mI (12174) RX: 158 byte packet received: [{
+	"dirt":	11.2548828125,
+	"rain":	11.5966796875,
+	"air":	35.693359375,
+	"sun":	99.9755859375,
+	"pressure":	99627.015625,
+	"temperature":	23.899999618530273
+}][0m
+[0;32mI (12194) RX: rssi=-38[dBm], snr=13[dB][0m
+[0;32mI (14234) RX: 144 byte packet received: [{
+	"dirt":	22.412109375,
+	"rain":	10.7666015625,
+	"air":	35.693359375,
+	"sun":	99.9755859375,
+	"pressure":	99602.140625,
+	"temperature":	23.75
+}][0m
+[0;32mI (14244) RX: rssi=-38[dBm], snr=13[dB][0m
+[0;32mI (15274) RX: 156 byte packet received: [{
+	"dirt":	21.2890625,
+	"rain":	10.7177734375,
+	"air":	35.6201171875,
+	"sun":	99.9755859375,
+	"pressure":	99623.984375,
+	"temperature":	23.899999618530273
+}][0m
+[0;32mI (15284) RX: rssi=-37[dBm], snr=13[dB][0m
+[0;32mI (16314) RX: 158 byte packet received: [{
+	"dirt":	14.599609375,
+	"rain":	11.6455078125,
+	"air":	35.3759765625,
+	"sun":	99.9755859375,
+	"pressure":	99626.734375,
+	"temperature":	23.899999618530273
+}][0m
+[0;32mI (16334) RX: rssi=-38[dBm], snr=13[dB][0m
+[0;32mI (18374) RX: 160 byte packet received: [{
+	"dirt":	19.8486328125,
+	"rain":	10.6689453125,
+	"air":	35.1806640625,
+	"sun":	99.9755859375,
+	"pressure":	99602.4140625,
+	"temperature":	23.760000228881836
+}][0m
+[0;32mI (18394) RX: rssi=-38[dBm], snr=12[dB][0m
+[0;32mI (19424) RX: 157 byte packet received: [{
+	"dirt":	19.04296875,
+	"rain":	10.595703125,
+	"air":	34.9365234375,
+	"sun":	99.9755859375,
+	"pressure":	99627.8515625,
+	"temperature":	23.909999847412109
+}][0m
+[0;32mI (19444) RX: rssi=-35[dBm], snr=12[dB][0m
+[0;32mI (20474) RX: 157 byte packet received: [{
+	"dirt":	18.8720703125,
+	"rain":	11.474609375,
+	"air":	34.9365234375,
+	"sun":	99.9755859375,
+	"pressure":	99629.65625,
+	"temperature":	23.909999847412109
+}][0m
+[0;32mI (20484) RX: rssi=-35[dBm], snr=12[dB][0m
+[0;32mI (21514) RX: 159 byte packet received: [{
+	"dirt":	17.138671875,
+	"rain":	10.5712890625,
+	"air":	35.0830078125,
+	"sun":	99.9755859375,
+	"pressure":	99628.1171875,
+	"temperature":	23.899999618530273
+}][0m
+[0;32mI (21534) RX: rssi=-35[dBm], snr=12[dB][0m
+[0;32mI (23574) RX: 159 byte packet received: [{
+	"dirt":	15.6005859375,
+	"rain":	10.595703125,
+	"air":	35.6689453125,
+	"sun":	99.9755859375,
+	"pressure":	99624.8203125,
+	"temperature":	23.899999618530273
+}][0m
+[0;32mI (23594) RX: rssi=-35[dBm], snr=12[dB][0m
+[0;32mI (24624) RX: 154 byte packet received: [{
+	"dirt":	21.19140625,
+	"rain":	11.376953125,
+	"air":	35.9619140625,
+	"sun":	99.9755859375,
+	"pressure":	99620.8125,
+	"temperature":	23.899999618530273
+}][0m
+[0;32mI (24634) RX: rssi=-36[dBm], snr=12[dB][0m
+[0;32mI (25664) RX: 151 byte packet received: [{
+	"dirt":	13.916015625,
+	"rain":	10.64453125,
+	"air":	35.9375,
+	"sun":	99.9755859375,
+	"pressure":	99627.6953125,
+	"temperature":	23.899999618530273
+}][0m
+[0;32mI (25674) RX: rssi=-35[dBm], snr=12[dB][0m
+[0;32mI (27714) RX: 154 byte packet received: [{
+	"dirt":	22.314453125,
+	"rain":	10.6201171875,
+	"air":	35.83984375,
+	"sun":	99.9755859375,
+	"pressure":	99597.3125,
+	"temperature":	23.739999771118164
+}][0m
+[0;32mI (27724) RX: rssi=-35[dBm], snr=12[dB][0m
+[0;32mI (28754) RX: 156 byte packet received: [{
+	"dirt":	12.1826171875,
+	"rain":	10.7421875,
+	"air":	35.888671875,
+	"sun":	99.9755859375,
+	"pressure":	99625.3515625,
+	"temperature":	23.889999389648438
+}][0m
+[0;32mI (28774) RX: rssi=-35[dBm], snr=12[dB][0m
+[0;32mI (29804) RX: 153 byte packet received: [{
+	"dirt":	23.33984375,
+	"rain":	11.23046875,
+	"air":	35.83984375,
+	"sun":	99.9755859375,
+	"pressure":	99626.046875,
+	"temperature":	23.889999389648438
+}][0m
+[0;32mI (29814) RX: rssi=-35[dBm], snr=12[dB][0m
+[0;32mI (30844) RX: 159 byte packet received: [{
+	"dirt":	11.2060546875,
+	"rain":	10.9130859375,
+	"air":	35.7666015625,
+	"sun":	99.9755859375,
+	"pressure":	99599.671875,
+	"temperature":	23.739999771118164
+}][0m
+[0;32mI (30864) RX: rssi=-35[dBm], snr=12[dB][0m
+[0;32mI (32904) RX: 150 byte packet received: [{
+	"dirt":	10.64453125,
+	"rain":	11.1328125,
+	"air":	35.64453125,
+	"sun":	99.9755859375,
+	"pressure":	99624.953125,
+	"temperature":	23.8799991607666
+}][0m
+[0;32mI (32914) RX: rssi=-35[dBm], snr=12[dB][0m
+[0;32mI (33944) RX: 156 byte packet received: [{
+	"dirt":	23.9013671875,
+	"rain":	10.9130859375,
+	"air":	35.44921875,
+	"sun":	99.9755859375,
+	"pressure":	99625.9140625,
+	"temperature":	23.8700008392334
+}][0m
+[0;32mI (33954) RX: rssi=-35[dBm], snr=13[dB][0m
+[0;32mI (34984) RX: 156 byte packet received: [{
+	"dirt":	10.6689453125,
+	"rain":	11.376953125,
+	"air":	35.4736328125,
+	"sun":	99.9755859375,
+	"pressure":	99624.953125,
+	"temperature":	23.8799991607666
+}][0m
+[0;32mI (34994) RX: rssi=-35[dBm], snr=12[dB][0m
+[0;32mI (36024) RX: 150 byte packet received: [{
+	"dirt":	10.9375,
+	"rain":	11.5966796875,
+	"air":	35.44921875,
+	"sun":	99.9755859375,
+	"pressure":	99627.2890625,
+	"temperature":	23.8700008392334
+}][0m
+[0;32mI (36034) RX: rssi=-35[dBm], snr=12[dB][0m
+[0;32mI (38074) RX: 151 byte packet received: [{
+	"dirt":	23.828125,
+	"rain":	10.8154296875,
+	"air":	35.498046875,
+	"sun":	99.9755859375,
+	"pressure":	99625.34375,
+	"temperature":	23.8799991607666
+}][0m
+[0;32mI (38084) RX: rssi=-35[dBm], snr=12[dB][0m
+[0;32mI (39114) RX: 157 byte packet received: [{
+	"dirt":	11.6943359375,
+	"rain":	11.669921875,
+	"air":	35.498046875,
+	"sun":	99.9755859375,
+	"pressure":	99624.546875,
+	"temperature":	23.889999389648438
+}][0m
+[0;32mI (39124) RX: rssi=-35[dBm], snr=12[dB][0m
+[0;32mI (40154) RX: 155 byte packet received: [{
+	"dirt":	12.59765625,
+	"rain":	11.6943359375,
+	"air":	35.3515625,
+	"sun":	99.9755859375,
+	"pressure":	99623.8515625,
+	"temperature":	23.889999389648438
+}][0m
+[0;32mI (40164) RX: rssi=-35[dBm], snr=13[dB][0m
+[0;32mI (42204) RX: 156 byte packet received: [{
+	"dirt":	22.75390625,
+	"rain":	10.6689453125,
+	"air":	35.2294921875,
+	"sun":	99.9755859375,
+	"pressure":	99626.34375,
+	"temperature":	23.889999389648438
+}][0m
+[0;32mI (42214) RX: rssi=-35[dBm], snr=12[dB][0m
+[0;32mI (43244) RX: 154 byte packet received: [{
+	"dirt":	13.8916015625,
+	"rain":	11.669921875,
+	"air":	35.15625,
+	"sun":	99.9755859375,
+	"pressure":	99624.8203125,
+	"temperature":	23.899999618530273
+}][0m
+[0;32mI (43254) RX: rssi=-35[dBm], snr=12[dB][0m
+[0;32mI (44284) RX: 158 byte packet received: [{
+	"dirt":	11.5478515625,
+	"rain":	10.986328125,
+	"air":	35.0830078125,
+	"sun":	99.9755859375,
+	"pressure":	99603.671875,
+	"temperature":	23.760000228881836
+}][0m
+[0;32mI (44304) RX: rssi=-35[dBm], snr=12[dB][0m
+[0;32mI (45334) RX: 155 byte packet received: [{
+	"dirt":	15.0146484375,
+	"rain":	11.5234375,
+	"air":	34.9853515625,
+	"sun":	35.009765625,
+	"pressure":	99627.984375,
+	"temperature":	23.940000534057617
+}][0m
+[0;32mI (45344) RX: rssi=-35[dBm], snr=13[dB][0m
+[0;32mI (47384) RX: 155 byte packet received: [{
+	"dirt":	16.845703125,
+	"rain":	10.6201171875,
+	"air":	35.107421875,
+	"sun":	37.40234375,
+	"pressure":	99620.015625,
+	"temperature":	23.969999313354492
+}][0m
+[0;32mI (47404) RX: rssi=-35[dBm], snr=12[dB][0m
+[0;32mI (48434) RX: 158 byte packet received: [{
+	"dirt":	16.3818359375,
+	"rain":	11.474609375,
+	"air":	35.1318359375,
+	"sun":	36.8896484375,
+	"pressure":	99586.171875,
+	"temperature":	23.780000686645508
+}][0m
+[0;32mI (48444) RX: rssi=-35[dBm], snr=13[dB][0m
+[0;32mI (49474) RX: 150 byte packet received: [{
+	"dirt":	17.3828125,
+	"rain":	11.42578125,
+	"air":	35.2294921875,
+	"sun":	37.3046875,
+	"pressure":	99622.65625,
+	"temperature":	24.069999694824219
+}][0m
+[0;32mI (49484) RX: rssi=-35[dBm], snr=13[dB][0m
+[0;32mI (51524) RX: 154 byte packet received: [{
+	"dirt":	14.7216796875,
+	"rain":	10.595703125,
+	"air":	35.25390625,
+	"sun":	40.52734375,
+	"pressure":	99624.203125,
+	"temperature":	24.100000381469727
+}][0m
+[0;32mI (51534) RX: rssi=-36[dBm], snr=13[dB][0m
+[0;32mI (52564) RX: 155 byte packet received: [{
+	"dirt":	20.458984375,
+	"rain":	11.4990234375,
+	"air":	35.205078125,
+	"sun":	99.9755859375,
+	"pressure":	99622.5625,
+	"temperature":	24.149999618530273
+}][0m
+[0;32mI (52574) RX: rssi=-34[dBm], snr=12[dB][0m
+[0;32mI (53604) RX: 152 byte packet received: [{
+	"dirt":	17.6513671875,
+	"rain":	11.328125,
+	"air":	35.546875,
+	"sun":	99.9755859375,
+	"pressure":	99617.7421875,
+	"temperature":	24.159999847412109
+}][0m
+[0;32mI (53614) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (54644) RX: 157 byte packet received: [{
+	"dirt":	13.9404296875,
+	"rain":	10.693359375,
+	"air":	35.25390625,
+	"sun":	99.9755859375,
+	"pressure":	99626.9765625,
+	"temperature":	24.170000076293945
+}][0m
+[0;32mI (54654) RX: rssi=-38[dBm], snr=12[dB][0m
+[0;32mI (56694) RX: 154 byte packet received: [{
+	"dirt":	17.919921875,
+	"rain":	11.328125,
+	"air":	35.2783203125,
+	"sun":	99.9755859375,
+	"pressure":	99624.765625,
+	"temperature":	24.180000305175781
+}][0m
+[0;32mI (56704) RX: rssi=-40[dBm], snr=13[dB][0m
+[0;32mI (57734) RX: 158 byte packet received: [{
+	"dirt":	18.0908203125,
+	"rain":	11.279296875,
+	"air":	34.4970703125,
+	"sun":	99.9755859375,
+	"pressure":	99621.046875,
+	"temperature":	24.180000305175781
+}][0m
+[0;32mI (57754) RX: rssi=-36[dBm], snr=12[dB][0m
+[0;32mI (58784) RX: 154 byte packet received: [{
+	"dirt":	13.0126953125,
+	"rain":	10.7421875,
+	"air":	34.4482421875,
+	"sun":	99.9755859375,
+	"pressure":	99626.5625,
+	"temperature":	24.180000305175781
+}][0m
+[0;32mI (58794) RX: rssi=-35[dBm], snr=12[dB][0m
+[0;32mI (60834) RX: 158 byte packet received: [{
+	"dirt":	18.7255859375,
+	"rain":	11.2548828125,
+	"air":	34.423828125,
+	"sun":	99.9755859375,
+	"pressure":	99621.859375,
+	"temperature":	24.190000534057617
+}][0m
+[0;32mI (60844) RX: rssi=-37[dBm], snr=12[dB][0m
+[0;32mI (61874) RX: 156 byte packet received: [{
+	"dirt":	12.40234375,
+	"rain":	10.791015625,
+	"air":	34.326171875,
+	"sun":	99.9755859375,
+	"pressure":	99584.6015625,
+	"temperature":	23.940000534057617
+}][0m
+[0;32mI (61884) RX: rssi=-38[dBm], snr=12[dB][0m
+[0;32mI (62914) RX: 154 byte packet received: [{
+	"dirt":	12.59765625,
+	"rain":	10.693359375,
+	"air":	34.326171875,
+	"sun":	99.9755859375,
+	"pressure":	99629.03125,
+	"temperature":	24.200000762939453
+}][0m
+[0;32mI (62924) RX: rssi=-46[dBm], snr=12[dB][0m
+[0;32mI (63954) RX: 158 byte packet received: [{
+	"dirt":	23.4619140625,
+	"rain":	11.279296875,
+	"air":	34.228515625,
+	"sun":	99.9755859375,
+	"pressure":	99625.3046875,
+	"temperature":	24.190000534057617
+}][0m
+[0;32mI (63964) RX: rssi=-49[dBm], snr=12[dB][0m
+[0;32mI (66004) RX: 156 byte packet received: [{
+	"dirt":	12.01171875,
+	"rain":	10.7177734375,
+	"air":	34.228515625,
+	"sun":	99.9755859375,
+	"pressure":	99619.796875,
+	"temperature":	24.190000534057617
+}][0m
+[0;32mI (66024) RX: rssi=-49[dBm], snr=12[dB][0m
+[0;32mI (67054) RX: 159 byte packet received: [{
+	"dirt":	11.5478515625,
+	"rain":	10.8154296875,
+	"air":	34.130859375,
+	"sun":	99.9755859375,
+	"pressure":	99627.7890625,
+	"temperature":	24.180000305175781
+}][0m
+[0;32mI (67064) RX: rssi=-49[dBm], snr=12[dB][0m
+[0;32mI (68094) RX: 159 byte packet received: [{
+	"dirt":	23.5107421875,
+	"rain":	11.181640625,
+	"air":	34.1064453125,
+	"sun":	99.9755859375,
+	"pressure":	99627.2421875,
+	"temperature":	24.170000076293945
+}][0m
+[0;32mI (68114) RX: rssi=-48[dBm], snr=12[dB][0m
+[0;32mI (69144) RX: 157 byte packet received: [{
+	"dirt":	11.2060546875,
+	"rain":	10.8642578125,
+	"air":	34.0576171875,
+	"sun":	99.9755859375,
+	"pressure":	99621.3125,
+	"temperature":	24.170000076293945
+}][0m
+[0;32mI (69154) RX: rssi=-48[dBm], snr=12[dB][0m
+[0;32mI (71194) RX: 154 byte packet received: [{
+	"dirt":	10.9375,
+	"rain":	10.9619140625,
+	"air":	34.0087890625,
+	"sun":	99.9755859375,
+	"pressure":	99627.8046875,
+	"temperature":	24.149999618530273
+}][0m
+[0;32mI (71204) RX: rssi=-47[dBm], snr=12[dB][0m
+[0;32mI (72234) RX: 154 byte packet received: [{
+	"dirt":	23.92578125,
+	"rain":	11.03515625,
+	"air":	33.935546875,
+	"sun":	99.9755859375,
+	"pressure":	99624.359375,
+	"temperature":	24.149999618530273
+}][0m
+[0;32mI (72244) RX: rssi=-47[dBm], snr=13[dB][0m
+[0;32mI (73274) RX: 155 byte packet received: [{
+	"dirt":	10.7421875,
+	"rain":	11.083984375,
+	"air":	33.935546875,
+	"sun":	99.9755859375,
+	"pressure":	99628.4921875,
+	"temperature":	24.149999618530273
+}][0m
+[0;32mI (73284) RX: rssi=-46[dBm], snr=12[dB][0m
+[0;32mI (75324) RX: 156 byte packet received: [{
+	"dirt":	10.6201171875,
+	"rain":	11.1572265625,
+	"air":	33.88671875,
+	"sun":	99.9755859375,
+	"pressure":	99627.65625,
+	"temperature":	24.149999618530273
+}][0m
+[0;32mI (75344) RX: rssi=-50[dBm], snr=12[dB][0m
+[0;32mI (76374) RX: 155 byte packet received: [{
+	"dirt":	23.974609375,
+	"rain":	10.9619140625,
+	"air":	33.88671875,
+	"sun":	99.9755859375,
+	"pressure":	99621.71875,
+	"temperature":	24.139999389648438
+}][0m
+[0;32mI (76384) RX: rssi=-52[dBm], snr=12[dB][0m
+[0;32mI (77414) RX: 154 byte packet received: [{
+	"dirt":	10.6201171875,
+	"rain":	11.181640625,
+	"air":	33.984375,
+	"sun":	99.9755859375,
+	"pressure":	99624.359375,
+	"temperature":	24.149999618530273
+}][0m
+[0;32mI (77424) RX: rssi=-53[dBm], snr=13[dB][0m
+[0;32mI (78454) RX: 158 byte packet received: [{
+	"dirt":	24.462890625,
+	"rain":	10.8154296875,
+	"air":	33.935546875,
+	"sun":	99.9755859375,
+	"pressure":	99590.8203125,
+	"temperature":	23.969999313354492
+}][0m
+[0;32mI (78464) RX: rssi=-53[dBm], snr=12[dB][0m
+[0;32mI (80504) RX: 157 byte packet received: [{
+	"dirt":	10.693359375,
+	"rain":	11.1083984375,
+	"air":	33.8134765625,
+	"sun":	99.9755859375,
+	"pressure":	99623.09375,
+	"temperature":	24.139999389648438
+}][0m
+[0;32mI (80514) RX: rssi=-53[dBm], snr=12[dB][0m
+[0;32mI (81544) RX: 155 byte packet received: [{
+	"dirt":	24.072265625,
+	"rain":	11.0107421875,
+	"air":	33.7890625,
+	"sun":	99.9755859375,
+	"pressure":	99621.984375,
+	"temperature":	24.139999389648438
+}][0m
+[0;32mI (81554) RX: rssi=-50[dBm], snr=12[dB][0m
+[0;32mI (82584) RX: 158 byte packet received: [{
+	"dirt":	10.8642578125,
+	"rain":	10.986328125,
+	"air":	33.8134765625,
+	"sun":	99.9755859375,
+	"pressure":	99616.890625,
+	"temperature":	24.090000152587891
+}][0m
+[0;32mI (82604) RX: rssi=-49[dBm], snr=13[dB][0m
+[0;32mI (84644) RX: 156 byte packet received: [{
+	"dirt":	11.2548828125,
+	"rain":	10.8642578125,
+	"air":	33.88671875,
+	"sun":	99.9755859375,
+	"pressure":	99622.40625,
+	"temperature":	24.139999389648438
+}][0m
+[0;32mI (84654) RX: rssi=-46[dBm], snr=13[dB][0m
+[0;32mI (85684) RX: 159 byte packet received: [{
+	"dirt":	25.1708984375,
+	"rain":	11.2060546875,
+	"air":	33.7646484375,
+	"sun":	99.9755859375,
+	"pressure":	99622.984375,
+	"temperature":	24.149999618530273
+}][0m
+[0;32mI (85704) RX: rssi=-46[dBm], snr=13[dB][0m
+[0;32mI (86734) RX: 144 byte packet received: [{
+	"dirt":	0,
+	"rain":	10.9619140625,
+	"air":	33.8134765625,
+	"sun":	99.9755859375,
+	"pressure":	99574.125,
+	"temperature":	23.860000610351562
+}][0m
+[0;32mI (86744) RX: rssi=-40[dBm], snr=13[dB][0m
+[0;32mI (87774) RX: 145 byte packet received: [{
+	"dirt":	0,
+	"rain":	10.64453125,
+	"air":	33.8623046875,
+	"sun":	99.9755859375,
+	"pressure":	99623.671875,
+	"temperature":	24.149999618530273
+}][0m
+[0;32mI (87784) RX: rssi=-46[dBm], snr=12[dB][0m
+[0;32mI (89824) RX: 159 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.9169921875,
+	"air":	33.837890625,
+	"sun":	99.9755859375,
+	"pressure":	99622.2890625,
+	"temperature":	24.149999618530273
+}][0m
+[0;32mI (89844) RX: rssi=-50[dBm], snr=13[dB][0m
+[0;32mI (90874) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.1357421875,
+	"air":	33.88671875,
+	"sun":	99.9755859375,
+	"pressure":	99622.2890625,
+	"temperature":	24.149999618530273
+}][0m
+[0;32mI (90894) RX: rssi=-74[dBm], snr=10[dB][0m
+[0;32mI (91924) RX: 159 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.1357421875,
+	"air":	33.8134765625,
+	"sun":	99.9755859375,
+	"pressure":	99622.828125,
+	"temperature":	24.159999847412109
+}][0m
+[0;32mI (91934) RX: rssi=-53[dBm], snr=12[dB][0m
+[0;32mI (92964) RX: 156 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.55078125,
+	"air":	34.326171875,
+	"sun":	99.9755859375,
+	"pressure":	99617.328125,
+	"temperature":	24.159999847412109
+}][0m
+[0;32mI (92974) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (95014) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	12.7197265625,
+	"air":	34.033203125,
+	"sun":	99.9755859375,
+	"pressure":	99627.234375,
+	"temperature":	24.159999847412109
+}][0m
+[0;32mI (95024) RX: rssi=-45[dBm], snr=12[dB][0m
+[0;32mI (96054) RX: 157 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	13.330078125,
+	"air":	33.88671875,
+	"sun":	99.9755859375,
+	"pressure":	99587.9140625,
+	"temperature":	23.920000076293945
+}][0m
+[0;32mI (96064) RX: rssi=-46[dBm], snr=13[dB][0m
+[0;32mI (97094) RX: 156 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	13.37890625,
+	"air":	33.837890625,
+	"sun":	99.9755859375,
+	"pressure":	99626.546875,
+	"temperature":	24.159999847412109
+}][0m
+[0;32mI (97104) RX: rssi=-45[dBm], snr=12[dB][0m
+[0;32mI (99144) RX: 159 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.3310546875,
+	"air":	33.8623046875,
+	"sun":	99.9755859375,
+	"pressure":	99622.140625,
+	"temperature":	24.159999847412109
+}][0m
+[0;32mI (99164) RX: rssi=-40[dBm], snr=12[dB][0m
+[0;32mI (100194) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	13.525390625,
+	"air":	34.0087890625,
+	"sun":	99.9755859375,
+	"pressure":	99596.328125,
+	"temperature":	24.020000457763672
+}][0m
+[0;32mI (100214) RX: rssi=-43[dBm], snr=13[dB][0m
+[0;32mI (101244) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	13.7451171875,
+	"air":	33.837890625,
+	"sun":	99.9755859375,
+	"pressure":	99623.796875,
+	"temperature":	24.170000076293945
+}][0m
+[0;32mI (101254) RX: rssi=-47[dBm], snr=13[dB][0m
+[0;32mI (102284) RX: 156 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.7216796875,
+	"air":	33.88671875,
+	"sun":	99.9755859375,
+	"pressure":	99622.15625,
+	"temperature":	24.170000076293945
+}][0m
+[0;32mI (102294) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (104334) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	13.9892578125,
+	"air":	33.837890625,
+	"sun":	99.9755859375,
+	"pressure":	99601.703125,
+	"temperature":	24.040000915527344
+}][0m
+[0;32mI (104344) RX: rssi=-47[dBm], snr=12[dB][0m
+[0;32mI (105374) RX: 154 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.16015625,
+	"air":	33.88671875,
+	"sun":	99.9755859375,
+	"pressure":	99621.03125,
+	"temperature":	24.159999847412109
+}][0m
+[0;32mI (105384) RX: rssi=-42[dBm], snr=13[dB][0m
+[0;32mI (106414) RX: 156 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.8681640625,
+	"air":	33.837890625,
+	"sun":	99.9755859375,
+	"pressure":	99623.9375,
+	"temperature":	24.149999618530273
+}][0m
+[0;32mI (106424) RX: rssi=-51[dBm], snr=12[dB][0m
+[0;32mI (108464) RX: 159 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.2822265625,
+	"air":	33.8623046875,
+	"sun":	99.9755859375,
+	"pressure":	99625.578125,
+	"temperature":	24.149999618530273
+}][0m
+[0;32mI (108484) RX: rssi=-46[dBm], snr=12[dB][0m
+[0;32mI (109514) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.2333984375,
+	"air":	33.8134765625,
+	"sun":	99.9755859375,
+	"pressure":	99623.65625,
+	"temperature":	24.139999389648438
+}][0m
+[0;32mI (109534) RX: rssi=-45[dBm], snr=12[dB][0m
+[0;32mI (110564) RX: 157 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.892578125,
+	"air":	33.8623046875,
+	"sun":	99.9755859375,
+	"pressure":	99620.90625,
+	"temperature":	24.139999389648438
+}][0m
+[0;32mI (110574) RX: rssi=-46[dBm], snr=12[dB][0m
+[0;32mI (111604) RX: 151 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.2578125,
+	"air":	33.9111328125,
+	"sun":	99.9755859375,
+	"pressure":	99619.375,
+	"temperature":	24.1299991607666
+}][0m
+[0;32mI (111614) RX: rssi=-46[dBm], snr=12[dB][0m
+[0;32mI (113654) RX: 153 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.2578125,
+	"air":	34.130859375,
+	"sun":	99.9755859375,
+	"pressure":	99624.453125,
+	"temperature":	24.1200008392334
+}][0m
+[0;32mI (113664) RX: rssi=-46[dBm], snr=12[dB][0m
+[0;32mI (114694) RX: 155 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.84375,
+	"air":	34.2041015625,
+	"sun":	99.9755859375,
+	"pressure":	99622.4140625,
+	"temperature":	24.110000610351562
+}][0m
+[0;32mI (114704) RX: rssi=-46[dBm], snr=12[dB][0m
+[0;32mI (115734) RX: 155 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.2822265625,
+	"air":	34.2041015625,
+	"sun":	99.9755859375,
+	"pressure":	99626.25,
+	"temperature":	24.110000610351562
+}][0m
+[0;32mI (115744) RX: rssi=-46[dBm], snr=12[dB][0m
+[0;32mI (117784) RX: 155 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.8193359375,
+	"air":	34.3505859375,
+	"sun":	99.9755859375,
+	"pressure":	99602.25,
+	"temperature":	23.950000762939453
+}][0m
+[0;32mI (117804) RX: rssi=-46[dBm], snr=12[dB][0m
+[0;32mI (118834) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.4287109375,
+	"air":	34.27734375,
+	"sun":	99.9755859375,
+	"pressure":	99626.9609375,
+	"temperature":	24.100000381469727
+}][0m
+[0;32mI (118854) RX: rssi=-46[dBm], snr=12[dB][0m
+[0;32mI (119884) RX: 160 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.7216796875,
+	"air":	34.2041015625,
+	"sun":	99.9755859375,
+	"pressure":	99626.5390625,
+	"temperature":	24.090000152587891
+}][0m
+[0;32mI (119904) RX: rssi=-47[dBm], snr=13[dB][0m
+[0;32mI (120934) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.501953125,
+	"air":	34.3017578125,
+	"sun":	99.9755859375,
+	"pressure":	99624.046875,
+	"temperature":	24.090000152587891
+}][0m
+[0;32mI (120944) RX: rssi=-46[dBm], snr=12[dB][0m
+[0;32mI (122984) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.6240234375,
+	"air":	34.228515625,
+	"sun":	99.9755859375,
+	"pressure":	99621.703125,
+	"temperature":	24.079999923706055
+}][0m
+[0;32mI (122994) RX: rssi=-46[dBm], snr=13[dB][0m
+[0;32mI (124024) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.5751953125,
+	"air":	34.228515625,
+	"sun":	99.9755859375,
+	"pressure":	99622.546875,
+	"temperature":	24.069999694824219
+}][0m
+[0;32mI (124034) RX: rssi=-46[dBm], snr=12[dB][0m
+[0;32mI (125064) RX: 153 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.74609375,
+	"air":	34.1796875,
+	"sun":	99.9755859375,
+	"pressure":	99619.78125,
+	"temperature":	24.069999694824219
+}][0m
+[0;32mI (125074) RX: rssi=-45[dBm], snr=12[dB][0m
+[0;32mI (127114) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.7705078125,
+	"air":	34.130859375,
+	"sun":	99.9755859375,
+	"pressure":	99625.296875,
+	"temperature":	24.069999694824219
+}][0m
+[0;32mI (127124) RX: rssi=-45[dBm], snr=12[dB][0m
+[0;32mI (128154) RX: 151 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.453125,
+	"air":	34.130859375,
+	"sun":	99.9755859375,
+	"pressure":	99623.625,
+	"temperature":	24.079999923706055
+}][0m
+[0;32mI (128164) RX: rssi=-45[dBm], snr=13[dB][0m
+[0;32mI (129194) RX: 153 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.7705078125,
+	"air":	34.1796875,
+	"sun":	99.9755859375,
+	"pressure":	99626.375,
+	"temperature":	24.079999923706055
+}][0m
+[0;32mI (129204) RX: rssi=-48[dBm], snr=13[dB][0m
+[0;32mI (130234) RX: 156 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.794921875,
+	"air":	34.2529296875,
+	"sun":	99.9755859375,
+	"pressure":	99625.6875,
+	"temperature":	24.079999923706055
+}][0m
+[0;32mI (130254) RX: rssi=-45[dBm], snr=13[dB][0m
+[0;32mI (132294) RX: 157 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.404296875,
+	"air":	34.228515625,
+	"sun":	99.9755859375,
+	"pressure":	99624.734375,
+	"temperature":	24.079999923706055
+}][0m
+[0;32mI (132304) RX: rssi=-45[dBm], snr=12[dB][0m
+[0;32mI (133334) RX: 152 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.84375,
+	"air":	34.3017578125,
+	"sun":	99.9755859375,
+	"pressure":	99625.5625,
+	"temperature":	24.069999694824219
+}][0m
+[0;32mI (133354) RX: rssi=-45[dBm], snr=13[dB][0m
+[0;32mI (134384) RX: 151 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.84375,
+	"air":	34.326171875,
+	"sun":	99.9755859375,
+	"pressure":	99624.3125,
+	"temperature":	24.079999923706055
+}][0m
+[0;32mI (134394) RX: rssi=-45[dBm], snr=13[dB][0m
+[0;32mI (135424) RX: 155 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.35546875,
+	"air":	34.326171875,
+	"sun":	99.9755859375,
+	"pressure":	99619.90625,
+	"temperature":	24.079999923706055
+}][0m
+[0;32mI (135434) RX: rssi=-49[dBm], snr=12[dB][0m
+[0;32mI (137474) RX: 159 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.8193359375,
+	"air":	34.2041015625,
+	"sun":	99.9755859375,
+	"pressure":	99627.484375,
+	"temperature":	24.079999923706055
+}][0m
+[0;32mI (137494) RX: rssi=-60[dBm], snr=12[dB][0m
+[0;32mI (138524) RX: 155 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.35546875,
+	"air":	34.1796875,
+	"sun":	99.9755859375,
+	"pressure":	99624.1953125,
+	"temperature":	24.079999923706055
+}][0m
+[0;32mI (138534) RX: rssi=-56[dBm], snr=13[dB][0m
+[0;32mI (139564) RX: 159 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.3798828125,
+	"air":	34.1064453125,
+	"sun":	99.9755859375,
+	"pressure":	99628.328125,
+	"temperature":	24.079999923706055
+}][0m
+[0;32mI (139584) RX: rssi=-56[dBm], snr=11[dB][0m
+[0;32mI (141624) RX: 160 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.8681640625,
+	"air":	34.0576171875,
+	"sun":	99.9755859375,
+	"pressure":	99628.4453125,
+	"temperature":	24.079999923706055
+}][0m
+[0;32mI (141644) RX: rssi=-55[dBm], snr=12[dB][0m
+[0;32mI (142674) RX: 153 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.35546875,
+	"air":	33.984375,
+	"sun":	99.9755859375,
+	"pressure":	99603.765625,
+	"temperature":	23.930000305175781
+}][0m
+[0;32mI (142684) RX: rssi=-57[dBm], snr=12[dB][0m
+[0;32mI (143714) RX: 157 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.3798828125,
+	"air":	34.27734375,
+	"sun":	99.9755859375,
+	"pressure":	99626.671875,
+	"temperature":	24.069999694824219
+}][0m
+[0;32mI (143734) RX: rssi=-52[dBm], snr=11[dB][0m
+[0;32mI (144764) RX: 154 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.84375,
+	"air":	34.3505859375,
+	"sun":	99.9755859375,
+	"pressure":	99623.921875,
+	"temperature":	24.069999694824219
+}][0m
+[0;32mI (144784) RX: rssi=-53[dBm], snr=13[dB][0m
+[0;32mI (146824) RX: 157 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.35546875,
+	"air":	34.2529296875,
+	"sun":	99.9755859375,
+	"pressure":	99602.109375,
+	"temperature":	23.920000076293945
+}][0m
+[0;32mI (146844) RX: rssi=-53[dBm], snr=12[dB][0m
+[0;32mI (147874) RX: 160 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.3310546875,
+	"air":	34.2041015625,
+	"sun":	99.9755859375,
+	"pressure":	99624.1796875,
+	"temperature":	24.059999465942383
+}][0m
+[0;32mI (147894) RX: rssi=-52[dBm], snr=13[dB][0m
+[0;32mI (148924) RX: 153 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.84375,
+	"air":	34.1552734375,
+	"sun":	99.9755859375,
+	"pressure":	99626.09375,
+	"temperature":	24.049999237060547
+}][0m
+[0;32mI (148934) RX: rssi=-51[dBm], snr=13[dB][0m
+[0;32mI (150974) RX: 159 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.2822265625,
+	"air":	34.2041015625,
+	"sun":	99.9755859375,
+	"pressure":	99624.328125,
+	"temperature":	24.049999237060547
+}][0m
+[0;32mI (150994) RX: rssi=-63[dBm], snr=12[dB][0m
+[0;32mI (152024) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.306640625,
+	"air":	34.521484375,
+	"sun":	99.9755859375,
+	"pressure":	99624.6015625,
+	"temperature":	24.059999465942383
+}][0m
+[0;32mI (152044) RX: rssi=-58[dBm], snr=12[dB][0m
+[0;32mI (153074) RX: 155 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.8681640625,
+	"air":	34.47265625,
+	"sun":	99.9755859375,
+	"pressure":	99618.8125,
+	"temperature":	24.049999237060547
+}][0m
+[0;32mI (153084) RX: rssi=-67[dBm], snr=12[dB][0m
+[0;32mI (154114) RX: 154 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.2578125,
+	"air":	34.47265625,
+	"sun":	99.9755859375,
+	"pressure":	99620.734375,
+	"temperature":	24.049999237060547
+}][0m
+[0;32mI (154124) RX: rssi=-61[dBm], snr=12[dB][0m
+[0;32mI (156164) RX: 145 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.84375,
+	"air":	34.375,
+	"sun":	99.9755859375,
+	"pressure":	99600.5625,
+	"temperature":	23.899999618530273
+}][0m
+[0;32mI (156174) RX: rssi=-70[dBm], snr=11[dB][0m
+[0;32mI (157204) RX: 157 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.2822265625,
+	"air":	34.8876953125,
+	"sun":	99.9755859375,
+	"pressure":	99623.0625,
+	"temperature":	24.040000915527344
+}][0m
+[0;32mI (157214) RX: rssi=-58[dBm], snr=12[dB][0m
+[0;32mI (158244) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.8681640625,
+	"air":	34.6435546875,
+	"sun":	99.9755859375,
+	"pressure":	99623.90625,
+	"temperature":	24.049999237060547
+}][0m
+[0;32mI (158264) RX: rssi=-59[dBm], snr=12[dB][0m
+[0;32mI (159294) RX: 153 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.2578125,
+	"air":	34.5703125,
+	"sun":	99.9755859375,
+	"pressure":	99598.921875,
+	"temperature":	23.909999847412109
+}][0m
+[0;32mI (159304) RX: rssi=-59[dBm], snr=12[dB][0m
+[0;32mI (161344) RX: 155 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.2578125,
+	"air":	34.2529296875,
+	"sun":	99.9755859375,
+	"pressure":	99626.09375,
+	"temperature":	24.049999237060547
+}][0m
+[0;32mI (161354) RX: rssi=-57[dBm], snr=12[dB][0m
+[0;32mI (162384) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.8681640625,
+	"air":	34.228515625,
+	"sun":	99.9755859375,
+	"pressure":	99625.828125,
+	"temperature":	24.059999465942383
+}][0m
+[0;32mI (162394) RX: rssi=-58[dBm], snr=11[dB][0m
+[0;32mI (163424) RX: 156 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.2822265625,
+	"air":	34.1796875,
+	"sun":	99.9755859375,
+	"pressure":	99628.734375,
+	"temperature":	24.059999465942383
+}][0m
+[0;32mI (163434) RX: rssi=-56[dBm], snr=12[dB][0m
+[0;32mI (165474) RX: 159 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.3310546875,
+	"air":	34.1064453125,
+	"sun":	99.9755859375,
+	"pressure":	99621.703125,
+	"temperature":	24.069999694824219
+}][0m
+[0;32mI (165494) RX: rssi=-56[dBm], snr=13[dB][0m
+[0;32mI (166524) RX: 154 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.8193359375,
+	"air":	34.0576171875,
+	"sun":	99.9755859375,
+	"pressure":	99623.5,
+	"temperature":	24.069999694824219
+}][0m
+[0;32mI (166534) RX: rssi=-56[dBm], snr=13[dB][0m
+[0;32mI (167564) RX: 152 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.2578125,
+	"air":	34.1064453125,
+	"sun":	99.9755859375,
+	"pressure":	99622.25,
+	"temperature":	24.079999923706055
+}][0m
+[0;32mI (167574) RX: rssi=-57[dBm], snr=12[dB][0m
+[0;32mI (168604) RX: 156 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.2822265625,
+	"air":	34.1796875,
+	"sun":	99.9755859375,
+	"pressure":	99626.109375,
+	"temperature":	24.079999923706055
+}][0m
+[0;32mI (168614) RX: rssi=-67[dBm], snr=13[dB][0m
+[0;32mI (170654) RX: 156 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.8193359375,
+	"air":	34.1064453125,
+	"sun":	99.9755859375,
+	"pressure":	99624.875,
+	"temperature":	24.069999694824219
+}][0m
+[0;32mI (170664) RX: rssi=-70[dBm], snr=12[dB][0m
+[0;32mI (171694) RX: 159 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.306640625,
+	"air":	34.0576171875,
+	"sun":	99.9755859375,
+	"pressure":	99623.9140625,
+	"temperature":	24.059999465942383
+}][0m
+[0;32mI (171714) RX: rssi=-58[dBm], snr=12[dB][0m
+[0;32mI (172744) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.74609375,
+	"air":	34.0576171875,
+	"sun":	99.9755859375,
+	"pressure":	99601.6953125,
+	"temperature":	23.930000305175781
+}][0m
+[0;32mI (172754) RX: rssi=-58[dBm], snr=12[dB][0m
+[0;32mI (174794) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.2822265625,
+	"air":	34.1064453125,
+	"sun":	99.9755859375,
+	"pressure":	99623.21875,
+	"temperature":	24.059999465942383
+}][0m
+[0;32mI (174804) RX: rssi=-55[dBm], snr=12[dB][0m
+[0;32mI (175834) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.8193359375,
+	"air":	34.08203125,
+	"sun":	99.9755859375,
+	"pressure":	99621.4296875,
+	"temperature":	24.069999694824219
+}][0m
+[0;32mI (175844) RX: rssi=-51[dBm], snr=12[dB][0m
+[0;32mI (176874) RX: 153 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.2822265625,
+	"air":	34.033203125,
+	"sun":	99.9755859375,
+	"pressure":	99602.5,
+	"temperature":	23.920000076293945
+}][0m
+[0;32mI (176884) RX: rssi=-51[dBm], snr=12[dB][0m
+[0;32mI (177914) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.306640625,
+	"air":	34.0576171875,
+	"sun":	99.9755859375,
+	"pressure":	99628.046875,
+	"temperature":	24.059999465942383
+}][0m
+[0;32mI (177934) RX: rssi=-51[dBm], snr=12[dB][0m
+[0;32mI (179974) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.794921875,
+	"air":	34.1064453125,
+	"sun":	99.9755859375,
+	"pressure":	99624.328125,
+	"temperature":	24.059999465942383
+}][0m
+[0;32mI (179984) RX: rssi=-52[dBm], snr=12[dB][0m
+[0;32mI (181014) RX: 159 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.3310546875,
+	"air":	34.2041015625,
+	"sun":	99.9755859375,
+	"pressure":	99622.953125,
+	"temperature":	24.059999465942383
+}][0m
+[0;32mI (181034) RX: rssi=-51[dBm], snr=12[dB][0m
+[0;32mI (182064) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.3798828125,
+	"air":	34.228515625,
+	"sun":	99.9755859375,
+	"pressure":	99624.328125,
+	"temperature":	24.059999465942383
+}][0m
+[0;32mI (182074) RX: rssi=-53[dBm], snr=12[dB][0m
+[0;32mI (184114) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.794921875,
+	"air":	34.228515625,
+	"sun":	99.9755859375,
+	"pressure":	99623.4921875,
+	"temperature":	24.059999465942383
+}][0m
+[0;32mI (184134) RX: rssi=-52[dBm], snr=13[dB][0m
+[0;32mI (185164) RX: 157 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.404296875,
+	"air":	34.228515625,
+	"sun":	99.9755859375,
+	"pressure":	99620.890625,
+	"temperature":	24.059999465942383
+}][0m
+[0;32mI (185184) RX: rssi=-56[dBm], snr=12[dB][0m
+[0;32mI (186214) RX: 157 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.404296875,
+	"air":	34.66796875,
+	"sun":	99.9755859375,
+	"pressure":	99628.0390625,
+	"temperature":	24.049999237060547
+}][0m
+[0;32mI (186224) RX: rssi=-55[dBm], snr=13[dB][0m
+[0;32mI (187254) RX: 156 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.7216796875,
+	"air":	34.814453125,
+	"sun":	99.9755859375,
+	"pressure":	99625.8125,
+	"temperature":	24.040000915527344
+}][0m
+[0;32mI (187264) RX: rssi=-58[dBm], snr=12[dB][0m
+[0;32mI (189304) RX: 160 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.4287109375,
+	"air":	34.7412109375,
+	"sun":	99.9755859375,
+	"pressure":	99625.4296875,
+	"temperature":	24.040000915527344
+}][0m
+[0;32mI (189324) RX: rssi=-52[dBm], snr=12[dB][0m
+[0;32mI (190354) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.404296875,
+	"air":	34.5947265625,
+	"sun":	99.9755859375,
+	"pressure":	99624.578125,
+	"temperature":	24.020000457763672
+}][0m
+[0;32mI (190364) RX: rssi=-51[dBm], snr=12[dB][0m
+[0;32mI (191394) RX: 156 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.697265625,
+	"air":	34.47265625,
+	"sun":	99.9755859375,
+	"pressure":	99626.109375,
+	"temperature":	24.030000686645508
+}][0m
+[0;32mI (191404) RX: rssi=-51[dBm], snr=12[dB][0m
+[0;32mI (193444) RX: 154 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.453125,
+	"air":	34.4482421875,
+	"sun":	99.9755859375,
+	"pressure":	99627.59375,
+	"temperature":	24.020000457763672
+}][0m
+[0;32mI (193454) RX: rssi=-51[dBm], snr=12[dB][0m
+[0;32mI (194484) RX: 159 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.599609375,
+	"air":	34.3994140625,
+	"sun":	99.9755859375,
+	"pressure":	99628.9765625,
+	"temperature":	24.020000457763672
+}][0m
+[0;32mI (194504) RX: rssi=-50[dBm], snr=12[dB][0m
+[0;32mI (195534) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.4775390625,
+	"air":	34.47265625,
+	"sun":	99.9755859375,
+	"pressure":	99623.1953125,
+	"temperature":	24.020000457763672
+}][0m
+[0;32mI (195554) RX: rssi=-43[dBm], snr=12[dB][0m
+[0;32mI (196584) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.7216796875,
+	"air":	34.47265625,
+	"sun":	99.9755859375,
+	"pressure":	99624.8515625,
+	"temperature":	24.030000686645508
+}][0m
+[0;32mI (196594) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (198634) RX: 160 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.4775390625,
+	"air":	34.3505859375,
+	"sun":	99.9755859375,
+	"pressure":	99597.1171875,
+	"temperature":	23.889999389648438
+}][0m
+[0;32mI (198654) RX: rssi=-44[dBm], snr=13[dB][0m
+[0;32mI (199684) RX: 160 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.4775390625,
+	"air":	34.2529296875,
+	"sun":	99.9755859375,
+	"pressure":	99622.2421875,
+	"temperature":	24.030000686645508
+}][0m
+[0;32mI (199704) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (200734) RX: 147 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.74609375,
+	"air":	34.1796875,
+	"sun":	99.9755859375,
+	"pressure":	99625,
+	"temperature":	24.030000686645508
+}][0m
+[0;32mI (200744) RX: rssi=-43[dBm], snr=13[dB][0m
+[0;32mI (201774) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.3798828125,
+	"air":	34.1552734375,
+	"sun":	99.9755859375,
+	"pressure":	99602.6171875,
+	"temperature":	23.8799991607666
+}][0m
+[0;32mI (201794) RX: rssi=-43[dBm], snr=12[dB][0m
+[0;32mI (203834) RX: 154 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.35546875,
+	"air":	34.228515625,
+	"sun":	99.9755859375,
+	"pressure":	99624.3125,
+	"temperature":	24.030000686645508
+}][0m
+[0;32mI (203844) RX: rssi=-43[dBm], snr=12[dB][0m
+[0;32mI (204874) RX: 156 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.794921875,
+	"air":	34.47265625,
+	"sun":	99.9755859375,
+	"pressure":	99624.046875,
+	"temperature":	24.030000686645508
+}][0m
+[0;32mI (204894) RX: rssi=-43[dBm], snr=13[dB][0m
+[0;32mI (205924) RX: 152 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.3310546875,
+	"air":	34.4970703125,
+	"sun":	99.9755859375,
+	"pressure":	99625,
+	"temperature":	24.030000686645508
+}][0m
+[0;32mI (205934) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (207974) RX: 152 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.306640625,
+	"air":	34.375,
+	"sun":	99.9755859375,
+	"pressure":	99624.4609375,
+	"temperature":	24.030000686645508
+}][0m
+[0;32mI (207984) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (209014) RX: 157 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.8681640625,
+	"air":	34.3994140625,
+	"sun":	99.9755859375,
+	"pressure":	99624.3125,
+	"temperature":	24.030000686645508
+}][0m
+[0;32mI (209024) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (210054) RX: 155 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.2333984375,
+	"air":	34.8388671875,
+	"sun":	99.9755859375,
+	"pressure":	99627.75,
+	"temperature":	24.030000686645508
+}][0m
+[0;32mI (210064) RX: rssi=-43[dBm], snr=12[dB][0m
+[0;32mI (211094) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.2822265625,
+	"air":	35.107421875,
+	"sun":	99.9755859375,
+	"pressure":	99627.328125,
+	"temperature":	24.020000457763672
+}][0m
+[0;32mI (211114) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (213154) RX: 156 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.892578125,
+	"air":	34.86328125,
+	"sun":	99.9755859375,
+	"pressure":	99624.984375,
+	"temperature":	24.010000228881836
+}][0m
+[0;32mI (213174) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (214204) RX: 157 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.2578125,
+	"air":	34.7412109375,
+	"sun":	99.9755859375,
+	"pressure":	99626.2421875,
+	"temperature":	24.010000228881836
+}][0m
+[0;32mI (214224) RX: rssi=-43[dBm], snr=13[dB][0m
+[0;32mI (215254) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.892578125,
+	"air":	34.7412109375,
+	"sun":	99.9755859375,
+	"pressure":	99603.171875,
+	"temperature":	23.860000610351562
+}][0m
+[0;32mI (215274) RX: rssi=-43[dBm], snr=12[dB][0m
+[0;32mI (217314) RX: 159 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.8681640625,
+	"air":	34.716796875,
+	"sun":	99.9755859375,
+	"pressure":	99627.0390625,
+	"temperature":	23.989999771118164
+}][0m
+[0;32mI (217334) RX: rssi=-43[dBm], snr=12[dB][0m
+[0;32mI (218364) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.3310546875,
+	"air":	34.7412109375,
+	"sun":	99.9755859375,
+	"pressure":	99626.34375,
+	"temperature":	23.989999771118164
+}][0m
+[0;32mI (218384) RX: rssi=-43[dBm], snr=12[dB][0m
+[0;32mI (219414) RX: 160 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.8681640625,
+	"air":	34.9365234375,
+	"sun":	99.9755859375,
+	"pressure":	99597.6484375,
+	"temperature":	23.840000152587891
+}][0m
+[0;32mI (219434) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (220464) RX: 156 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.8193359375,
+	"air":	34.765625,
+	"sun":	99.9755859375,
+	"pressure":	99621.3984375,
+	"temperature":	23.969999313354492
+}][0m
+[0;32mI (220474) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (222514) RX: 151 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.453125,
+	"air":	34.765625,
+	"sun":	99.9755859375,
+	"pressure":	99624.296875,
+	"temperature":	23.959999084472656
+}][0m
+[0;32mI (222524) RX: rssi=-43[dBm], snr=12[dB][0m
+[0;32mI (223554) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.794921875,
+	"air":	34.619140625,
+	"sun":	99.9755859375,
+	"pressure":	99627.3203125,
+	"temperature":	23.959999084472656
+}][0m
+[0;32mI (223564) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (224594) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.697265625,
+	"air":	34.3994140625,
+	"sun":	99.9755859375,
+	"pressure":	99626.359375,
+	"temperature":	23.950000762939453
+}][0m
+[0;32mI (224604) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (225404) http_server: JSON data requested[0m
+[0;32mI (225404) http_server: Sent JSON: {
+	"dirt":	99.9755859375,
+	"rain":	14.697265625,
+	"air":	34.3994140625,
+	"sun":	99.9755859375,
+	"pressure":	99626.359375,
+	"temperature":	23.950000762939453
+}[0m
+[0;32mI (225634) RX: 157 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.599609375,
+	"air":	34.5458984375,
+	"sun":	99.9755859375,
+	"pressure":	99625.40625,
+	"temperature":	23.950000762939453
+}][0m
+[0;32mI (225654) RX: rssi=-43[dBm], snr=12[dB][0m
+[0;32mI (227694) RX: 156 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.6240234375,
+	"air":	34.765625,
+	"sun":	99.9755859375,
+	"pressure":	99624.0234375,
+	"temperature":	23.950000762939453
+}][0m
+[0;32mI (227704) RX: rssi=-43[dBm], snr=12[dB][0m
+[0;32mI (228734) RX: 159 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.501953125,
+	"air":	34.7412109375,
+	"sun":	99.9755859375,
+	"pressure":	99621.9296875,
+	"temperature":	23.969999313354492
+}][0m
+[0;32mI (228754) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (229784) RX: 159 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.6728515625,
+	"air":	34.7412109375,
+	"sun":	99.9755859375,
+	"pressure":	99625.265625,
+	"temperature":	23.969999313354492
+}][0m
+[0;32mI (229804) RX: rssi=-43[dBm], snr=12[dB][0m
+[0;32mI (231844) RX: 160 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.4775390625,
+	"air":	34.6435546875,
+	"sun":	99.9755859375,
+	"pressure":	99623.1953125,
+	"temperature":	23.969999313354492
+}][0m
+[0;32mI (231864) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (232894) RX: 156 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.4775390625,
+	"air":	34.521484375,
+	"sun":	99.9755859375,
+	"pressure":	99623.3125,
+	"temperature":	23.969999313354492
+}][0m
+[0;32mI (232904) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (233934) RX: 156 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.7216796875,
+	"air":	34.619140625,
+	"sun":	99.9755859375,
+	"pressure":	99624.5625,
+	"temperature":	23.959999084472656
+}][0m
+[0;32mI (233944) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (234974) RX: 159 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.4287109375,
+	"air":	34.7412109375,
+	"sun":	99.9755859375,
+	"pressure":	99623.453125,
+	"temperature":	23.959999084472656
+}][0m
+[0;32mI (234994) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (237034) RX: 160 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.6240234375,
+	"air":	34.6923828125,
+	"sun":	99.9755859375,
+	"pressure":	99601.0703125,
+	"temperature":	23.809999465942383
+}][0m
+[0;32mI (237054) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (238084) RX: 156 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.453125,
+	"air":	34.4970703125,
+	"sun":	99.9755859375,
+	"pressure":	99626.6328125,
+	"temperature":	23.959999084472656
+}][0m
+[0;32mI (238094) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (239124) RX: 154 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.74609375,
+	"air":	34.47265625,
+	"sun":	99.9755859375,
+	"pressure":	99624.40625,
+	"temperature":	23.959999084472656
+}][0m
+[0;32mI (239134) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (241174) RX: 153 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.5263671875,
+	"air":	34.375,
+	"sun":	99.9755859375,
+	"pressure":	99624.7109375,
+	"temperature":	23.950000762939453
+}][0m
+[0;32mI (241194) RX: rssi=-44[dBm], snr=12[dB][0m
+[0;32mI (242224) RX: 160 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.5751953125,
+	"air":	34.5458984375,
+	"sun":	99.9755859375,
+	"pressure":	99624.0234375,
+	"temperature":	23.950000762939453
+}][0m
+[0;32mI (242244) RX: rssi=-45[dBm], snr=13[dB][0m
+[0;32mI (243274) RX: 159 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.6240234375,
+	"air":	34.521484375,
+	"sun":	99.9755859375,
+	"pressure":	99622.4921875,
+	"temperature":	23.950000762939453
+}][0m
+[0;32mI (243294) RX: rssi=-50[dBm], snr=12[dB][0m
+[0;32mI (244324) RX: 156 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.697265625,
+	"air":	34.423828125,
+	"sun":	99.9755859375,
+	"pressure":	99599.96875,
+	"temperature":	23.819999694824219
+}][0m
+[0;32mI (244334) RX: rssi=-41[dBm], snr=13[dB][0m
+[0;32mI (246374) RX: 151 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.7216796875,
+	"air":	34.375,
+	"sun":	99.9755859375,
+	"pressure":	99622.21875,
+	"temperature":	23.950000762939453
+}][0m
+[0;32mI (246384) RX: rssi=-50[dBm], snr=12[dB][0m
+[0;32mI (247414) RX: 159 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.501953125,
+	"air":	34.3505859375,
+	"sun":	99.9755859375,
+	"pressure":	99624.2890625,
+	"temperature":	23.950000762939453
+}][0m
+[0;32mI (247434) RX: rssi=-43[dBm], snr=12[dB][0m
+[0;32mI (248464) RX: 157 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.8681640625,
+	"air":	34.326171875,
+	"sun":	99.9755859375,
+	"pressure":	99603.40625,
+	"temperature":	23.809999465942383
+}][0m
+[0;32mI (248484) RX: rssi=-38[dBm], snr=12[dB][0m
+[0;32mI (250524) RX: 158 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.8193359375,
+	"air":	34.228515625,
+	"sun":	99.9755859375,
+	"pressure":	99623.328125,
+	"temperature":	23.940000534057617
+}][0m
+[0;32mI (250544) RX: rssi=-38[dBm], snr=13[dB][0m
+[0;32mI (251574) RX: 157 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.404296875,
+	"air":	34.228515625,
+	"sun":	99.9755859375,
+	"pressure":	99625.515625,
+	"temperature":	23.950000762939453
+}][0m
+[0;32mI (251584) RX: rssi=-38[dBm], snr=12[dB][0m
+[0;32mI (252614) RX: 154 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.84375,
+	"air":	34.2041015625,
+	"sun":	99.9755859375,
+	"pressure":	99628.421875,
+	"temperature":	23.950000762939453
+}][0m
+[0;32mI (252624) RX: rssi=-37[dBm], snr=12[dB][0m
+[0;32mI (253654) RX: 151 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.84375,
+	"air":	34.130859375,
+	"sun":	99.9755859375,
+	"pressure":	99624.4375,
+	"temperature":	23.940000534057617
+}][0m
+[0;32mI (253664) RX: rssi=-37[dBm], snr=13[dB][0m
+[0;32mI (255704) RX: 160 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.3310546875,
+	"air":	34.1552734375,
+	"sun":	99.9755859375,
+	"pressure":	99623.4453125,
+	"temperature":	23.950000762939453
+}][0m
+[0;32mI (255724) RX: rssi=-38[dBm], snr=13[dB][0m
+[0;32mI (256754) RX: 155 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.892578125,
+	"air":	34.1552734375,
+	"sun":	99.9755859375,
+	"pressure":	99627.875,
+	"temperature":	23.940000534057617
+}][0m
+[0;32mI (256764) RX: rssi=-38[dBm], snr=13[dB][0m
+[0;32mI (257794) RX: 156 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.2822265625,
+	"air":	34.1064453125,
+	"sun":	99.9755859375,
+	"pressure":	99601.875,
+	"temperature":	23.799999237060547
+}][0m
+[0;32mI (257804) RX: rssi=-38[dBm], snr=12[dB][0m
+[0;32mI (258834) RX: 154 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.2578125,
+	"air":	34.1064453125,
+	"sun":	99.9755859375,
+	"pressure":	99624.4375,
+	"temperature":	23.940000534057617
+}][0m
+[0;32mI (258844) RX: rssi=-38[dBm], snr=13[dB][0m
+[0;32mI (260884) RX: 157 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.9658203125,
+	"air":	34.08203125,
+	"sun":	99.9755859375,
+	"pressure":	99621.796875,
+	"temperature":	23.950000762939453
+}][0m
+[0;32mI (260894) RX: rssi=-41[dBm], snr=13[dB][0m
+[0;32mI (261924) RX: 157 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.16015625,
+	"air":	34.1064453125,
+	"sun":	99.9755859375,
+	"pressure":	99604.515625,
+	"temperature":	23.809999465942383
+}][0m
+[0;32mI (261934) RX: rssi=-40[dBm], snr=12[dB][0m
+[0;32mI (262964) RX: 159 byte packet received: [{
+	"dirt":	99.9755859375,
+	"rain":	14.111328125,
+	"air":	34.1064453125,
+	"sun":	99.9755859375,
+	"pressure":	99624.0234375,
+	"temperature":	23.950000762939453
+}][0m
+[0;32mI (262984) RX: rssi=-41[dBm], snr=12[dB][0m
