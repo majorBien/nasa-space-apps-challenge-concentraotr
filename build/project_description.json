@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "app-template",
-    "project_version":    "6038b13-dirty",
+    "project_version":    "02140cd-dirty",
     "project_path":       "/home/majorbien/eclipse-workspace/nasa-space-app-data-concentrator",
     "idf_path":           "/opt/esp-idf",
     "build_dir":          "/home/majorbien/eclipse-workspace/nasa-space-app-data-concentrator/build",
@@ -805,7 +805,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/majorbien/eclipse-workspace/nasa-space-app-data-concentrator/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/majorbien/eclipse-workspace/nasa-space-app-data-concentrator/main/main.c", "/home/majorbien/eclipse-workspace/nasa-space-app-data-concentrator/main/lora.c", "/home/majorbien/eclipse-workspace/nasa-space-app-data-concentrator/main/wifi.c", "/home/majorbien/eclipse-workspace/nasa-space-app-data-concentrator/main/http_server.c" ],
+            "sources": [ "/home/majorbien/eclipse-workspace/nasa-space-app-data-concentrator/main/main.c", "/home/majorbien/eclipse-workspace/nasa-space-app-data-concentrator/main/lora.c", "/home/majorbien/eclipse-workspace/nasa-space-app-data-concentrator/main/wifi.c", "/home/majorbien/eclipse-workspace/nasa-space-app-data-concentrator/main/http_server.c", "/home/majorbien/eclipse-workspace/nasa-space-app-data-concentrator/main/gsm.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {

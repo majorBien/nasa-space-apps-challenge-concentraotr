@@ -11,7 +11,7 @@
 #include "lora.h"
 #include "nvs_flash.h"
 #include "wifi.h"
-
+#include "gsm.h"
 
 static const char *TAG = "MAIN";
 
@@ -30,9 +30,15 @@ void app_main()
 	ESP_ERROR_CHECK(ret);
 	
 
-	loraInit();
-	loraTaskStart();
-	wifi_app_start();
+	//loraInit();
+	//loraTaskStart();
+	//wifi_app_start();
+	
+	init_uart();
+    init_sim800l();
 
+		send_sms("515560361", "hej");	
+		vTaskDelay(pdMS_TO_TICKS(3000));
+	
 
 }

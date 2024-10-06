@@ -120,8 +120,6 @@ static httpd_handle_t http_server_configure(void)
         
         httpd_register_uri_handler(http_server_handle, &json_post1);
         
-        
-        
 
         return http_server_handle;
     }
