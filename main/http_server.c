@@ -32,6 +32,7 @@ static TaskHandle_t task_http_server_monitor = NULL;
 static QueueHandle_t http_server_monitor_queue_handle;
  
 static esp_err_t http_server_json_handler1(httpd_req_t *req);
+static esp_err_t http_server_json_handler2(httpd_req_t *req);
 
 static void http_server_monitor(void *parameter)
 {
@@ -118,8 +119,17 @@ static httpd_handle_t http_server_configure(void)
                  .user_ctx = NULL
         };
         
+        
+        
         httpd_register_uri_handler(http_server_handle, &json_post1);
         
+        httpd_uri_t json_post2 = {
+    			 .uri = "/alert",
+   				 .method = HTTP_POST,
+   				 .handler = http_server_json_handler2,
+   				 .user_ctx = NULL
+		};
+		httpd_register_uri_handler(http_server_handle, &json_post2);
 
         return http_server_handle;
     }
@@ -188,6 +198,50 @@ static esp_err_t http_server_json_handler1(httpd_req_t *req) {
     return ESP_OK; 
 }
  
+ 
+ 
+static esp_err_t http_server_json_handler2(httpd_req_t *req)
+{
+    ESP_LOGI(TAG, "JSON data requested");
+    httpd_resp_set_hdr(req, "Access-Control-Allow-Origin", "*");
+    httpd_resp_set_hdr(req, "Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+    httpd_resp_set_hdr(req, "Access-Control-Allow-Headers", "Content-Type");
+
+    char buf[256] = { 0 };
+    int ret, total_length = 0;
+
+    do {
+        ret = httpd_req_recv(req, buf + total_length, sizeof(buf) - total_length - 1);
+        if (ret == HTTPD_SOCK_ERR_TIMEOUT) {
+            ESP_LOGI(TAG, "timeout, continue receiving");
+            continue;
+        }
+        if (ret < 0) {
+            ESP_LOGE(TAG, "Error receiving data! (status = %d)", ret);
+            return ESP_FAIL;
+        }
+        total_length += ret;
+        buf[total_length] = '\0';
+    } while (ret >= sizeof(buf) - total_length); 
+
+    ESP_LOGI(TAG, "Received JSON: %s", buf);
+
+
+    strncpy(json_buffer, buf, sizeof(json_buffer));
+
+    cJSON *json = cJSON_Parse(buf);
+    if (json == NULL) {
+        ESP_LOGE(TAG, "Failed to parse JSON");
+        return ESP_FAIL;
+    }
+
+    cJSON_Delete(json);
+
+    const char *resp_str = "Data received successfully!";
+    char * ok = "200";
+    httpd_resp_send(req, ok, strlen(ok));
+    return ESP_OK;
+}
 
 
 

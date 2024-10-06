@@ -32,7 +32,7 @@ void receive_modem_response() {
 }
 
 void send_sms(const char *phone_number, const char *message) {
-    send_at_command("AT+CMGF=1");  // Ustaw tryb SMS
+    send_at_command("AT+CMGF=1"); 
     vTaskDelay(pdMS_TO_TICKS(2000)); 
     receive_modem_response();  
 
@@ -43,9 +43,9 @@ void send_sms(const char *phone_number, const char *message) {
     receive_modem_response();  
 
     uart_write_bytes(MODEM_UART_NUM, message, strlen(message));
-    uart_write_bytes(MODEM_UART_NUM, "\x1A", 1);  // Znak końca wiadomości
+    uart_write_bytes(MODEM_UART_NUM, "\x1A", 1);  
     vTaskDelay(pdMS_TO_TICKS(5000));  
-    receive_modem_response();  // Odbierz odpowiedź po wysłaniu SMS
+    receive_modem_response();  
 }
 
 void init_sim800l() {
@@ -73,7 +73,6 @@ void init_sim800l() {
     vTaskDelay(pdMS_TO_TICKS(2000));
     receive_modem_response();
 
-    // Dodaj AT+CMEE=1 dla raportowania błędów
     send_at_command("AT+CMEE=1");
     vTaskDelay(pdMS_TO_TICKS(2000));
     receive_modem_response();
