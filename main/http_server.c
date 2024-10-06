@@ -17,6 +17,7 @@
 #include <string.h> 
 #include <cJSON.h> 
 #include "lora.h"
+#include "gsm.h"
  
 char json_buffer[256]; 
  
@@ -234,6 +235,9 @@ static esp_err_t http_server_json_handler2(httpd_req_t *req)
         ESP_LOGE(TAG, "Failed to parse JSON");
         return ESP_FAIL;
     }
+    char number[9] = "123456789";
+    char message[20] = "empty message";
+    send_sms(number, message);
 
     cJSON_Delete(json);
 

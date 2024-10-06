@@ -30,15 +30,13 @@ void app_main()
 	ESP_ERROR_CHECK(ret);
 	
 
-	//loraInit();
-	//loraTaskStart();
-	//wifi_app_start();
-	
+	loraInit();
+	loraTaskStart();
+	wifi_app_start();
 	init_uart();
     init_sim800l();
 
-		send_sms("515560361", "hej");	
-		vTaskDelay(pdMS_TO_TICKS(3000));
+
 	
 
 }
