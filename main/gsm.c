@@ -50,32 +50,12 @@ void send_sms(const char *phone_number, const char *message) {
 
 void init_sim800l() {
     send_at_command("AT");
-    vTaskDelay(pdMS_TO_TICKS(2000));
+    vTaskDelay(pdMS_TO_TICKS(1000));
     receive_modem_response();
-
-    send_at_command("ATE1");
-    vTaskDelay(pdMS_TO_TICKS(2000));
-    receive_modem_response();
-
-    send_at_command("AT+CSQ");
-    vTaskDelay(pdMS_TO_TICKS(2000));
-    receive_modem_response();
-    
     send_at_command("AT+CPIN?");
-    vTaskDelay(pdMS_TO_TICKS(2000));
+    vTaskDelay(pdMS_TO_TICKS(1000));
     receive_modem_response();
 
-    send_at_command("AT+CCID?");
-    vTaskDelay(pdMS_TO_TICKS(2000));
-    receive_modem_response();
-    
-    send_at_command("AT+CREG?");
-    vTaskDelay(pdMS_TO_TICKS(2000));
-    receive_modem_response();
-
-    send_at_command("AT+CMEE=1");
-    vTaskDelay(pdMS_TO_TICKS(2000));
-    receive_modem_response();
 }
 
 void init_uart() {

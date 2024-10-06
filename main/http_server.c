@@ -200,17 +200,19 @@ static esp_err_t http_server_json_handler1(httpd_req_t *req) {
 }
  
  
- 
-static esp_err_t http_server_json_handler2(httpd_req_t *req)
+ static esp_err_t http_server_json_handler2(httpd_req_t *req)
 {
     ESP_LOGI(TAG, "JSON data requested");
+
+    // Set appropriate CORS headers
     httpd_resp_set_hdr(req, "Access-Control-Allow-Origin", "*");
     httpd_resp_set_hdr(req, "Access-Control-Allow-Methods", "GET, POST, OPTIONS");
     httpd_resp_set_hdr(req, "Access-Control-Allow-Headers", "Content-Type");
 
-    char buf[256] = { 0 };
+    char buf[256] = { 0 };  // Buffer to store received data
     int ret, total_length = 0;
 
+    // Receive data in chunks
     do {
         ret = httpd_req_recv(req, buf + total_length, sizeof(buf) - total_length - 1);
         if (ret == HTTPD_SOCK_ERR_TIMEOUT) {
@@ -222,30 +224,51 @@ static esp_err_t http_server_json_handler2(httpd_req_t *req)
             return ESP_FAIL;
         }
         total_length += ret;
-        buf[total_length] = '\0';
-    } while (ret >= sizeof(buf) - total_length); 
+        buf[total_length] = '\0';  // Null-terminate the buffer
+    } while (ret > 0 && total_length < sizeof(buf) - 1);
 
     ESP_LOGI(TAG, "Received JSON: %s", buf);
 
-
-    strncpy(json_buffer, buf, sizeof(json_buffer));
-
+    // Parse JSON data
     cJSON *json = cJSON_Parse(buf);
     if (json == NULL) {
         ESP_LOGE(TAG, "Failed to parse JSON");
         return ESP_FAIL;
     }
-    char number[9] = "123456789";
-    char message[20] = "empty message";
+
+    // Extract "number" field
+    cJSON *json_number = cJSON_GetObjectItemCaseSensitive(json, "number");
+    if (!cJSON_IsString(json_number) || (json_number->valuestring == NULL)) {
+        ESP_LOGE(TAG, "Invalid or missing 'number' field");
+        cJSON_Delete(json);
+        return ESP_FAIL;
+    }
+
+    // Extract "message" field
+    cJSON *json_message = cJSON_GetObjectItemCaseSensitive(json, "message");
+    if (!cJSON_IsString(json_message) || (json_message->valuestring == NULL)) {
+        ESP_LOGE(TAG, "Invalid or missing 'message' field");
+        cJSON_Delete(json);
+        return ESP_FAIL;
+    }
+
+    // Use the extracted values
+    const char *number = json_number->valuestring;
+    const char *message = json_message->valuestring;
+
+    ESP_LOGI(TAG, "Sending SMS to number: %s, with message: %s", number, message);
+
+
     send_sms(number, message);
 
     cJSON_Delete(json);
 
     const char *resp_str = "Data received successfully!";
-    char * ok = "200";
-    httpd_resp_send(req, ok, strlen(ok));
+    httpd_resp_send(req, resp_str, strlen(resp_str));
+
     return ESP_OK;
 }
+
 
 
 

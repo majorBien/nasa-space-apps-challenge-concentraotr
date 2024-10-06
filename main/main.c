@@ -19,7 +19,6 @@ static const char *TAG = "MAIN";
 
 void app_main()
 {
-	//openFirstAidKit = 0;
 	ESP_LOGI(TAG, "APP START");
 	esp_err_t ret = nvs_flash_init();
 	if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND)
@@ -35,7 +34,7 @@ void app_main()
 	wifi_app_start();
 	init_uart();
     init_sim800l();
-
+	//send_sms("692336423", "xyz");	
 
 	
 
